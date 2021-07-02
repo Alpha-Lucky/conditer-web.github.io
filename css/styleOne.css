@@ -1,0 +1,160 @@
+
+html, body, section, .container {
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    line-height: 1.4;
+    overflow-x: hidden;
+  }
+  
+  nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 0;
+    margin: 0;
+    border-bottom: 0.5px solid #bbbbbb;
+    
+  }
+  
+  .menu{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .titleOne {
+    position: relative; 
+    left: 30vw;
+    color: tomato;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;    
+}
+  .title {
+    position: relative; 
+    left: 30vw;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;    
+    color: tomato;
+}
+  .menu li{
+    display: inline-block;
+  }
+  
+  .menu li a{
+    display: block;
+    padding: 10px 15px;
+    color: tomato;
+    text-decoration: none;
+  }
+ 
+  .wrapper{
+    max-width: 100vw;
+    padding: 10px;
+    margin: 0px auto;
+  }
+  .container {
+    max-width: 1500px;
+    top: 0;
+    left: 0;
+    margin: 100px auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+.products{
+    max-width: 350px;
+    max-height: 350px;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    text-align: center;
+    font-style: italic;
+    font-size: 15px;
+    color: tomato;
+
+}
+img {max-height: 100%; max-width: 100%;}
+ 
+  .menuToggle{  
+      color: rgb(245, 0, 0);
+      padding: 10px 15px;
+      cursor: pointer;
+      display: none;
+  }
+  
+  @media( max-width: 640px){
+      .menuToggle{
+          display: block;
+          
+      }
+      .menu{
+        display: none;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.7);
+        min-width: 50vw;
+        margin: 5px 0 0 -10px;
+        padding-left: 10px;
+        text-align: center;
+        font-weight: bold;
+      }
+      .menu li{
+          display: block;
+      }
+      .products{
+        max-width: 100px;
+        max-height: 100px;
+    }
+  }
+  
+  .icon {
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+  }
+  
+  .hamburger {
+      width: 30px;
+      height: 4px;
+      transform: translate(-50%, -50%);
+      background: tomato;
+      transition: 0.5s;
+      display: inline-block;
+      margin-left: 12px;
+  }
+  
+  .hamburger:before,
+  .hamburger:after {
+      content: "";
+      width: 40px;
+      height: 4px;
+      position: absolute;
+      background: tomato;
+      transition: 0.5s;
+  }
+  
+  .hamburger:before {
+      top: -16px;
+  }
+  
+  .hamburger:after {
+      top: 16px;
+  }
+  
+  .icon.active .hamburger {
+      background: rgba(0, 0, 0, 0);
+  }
+  
+  .icon.active .hamburger:before {
+      top: 0;
+      transform: rotate(45deg);
+  }
+  
+  .icon.active .hamburger:after {
+      top: 0;
+      transform: rotate(135deg);
+  }
